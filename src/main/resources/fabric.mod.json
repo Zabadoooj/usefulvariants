@@ -3,13 +3,13 @@
 	"id": "usefulvariants",
 	"version": "0.0.1",
 	"name": "UsefulVariants",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "Adds and expands some mechanics with new mobs variants",
 	"authors": [
 		"Zabadooj"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://modrinth.com/mod/useful-mobsvariants",
+		"sources": "https://github.com/Zabadoooj/usefulvariants"
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/usefulvariants/icon.png",

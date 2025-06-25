@@ -8,11 +8,26 @@
           "type": "minecraft:item",
           "functions": [
             {
+              "function": "minecraft:set_item",
+              "item": "usefulvariants:pork_fat",
+              "conditions": [
+                {
+                  "condition": "minecraft:entity_properties",
+                  "entity": "this",
+                  "predicate": {
+                    "components": {
+                      "minecraft:pig/variant": "minecraft:cold"
+                    }
+                  }
+                }
+              ]
+            },
+            {
               "add": false,
               "count": {
                 "type": "minecraft:uniform",
-                "max": 4,
-                "min": 2
+                "max": 1,
+                "min": 0
               },
               "conditions": [
                 {
@@ -31,7 +46,7 @@
               "add": false,
               "count": {
                 "type": "minecraft:uniform",
-                "max": 2,
+                "max": 1,
                 "min": 0
               },
               "conditions": [
@@ -51,8 +66,89 @@
               "add": false,
               "count": {
                 "type": "minecraft:uniform",
+                "max": 0,
+                "min": 0
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:entity_properties",
+                  "entity": "this",
+                  "predicate": {
+                    "components": {
+                      "minecraft:pig/variant": "minecraft:temperate"
+                    }
+                  }
+                }
+              ],
+              "function": "minecraft:set_count"
+            },
+            {
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 1,
+                "min": 0
+              },
+              "enchantment": "minecraft:looting",
+              "function": "minecraft:enchanted_count_increase"
+            }
+          ],
+          "name": "minecraft:leather"
+        }
+      ],
+      "rolls": 1
+    },
+    {
+      "bonus_rolls": 0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "add": false,
+              "count": {
+                "type": "minecraft:uniform",
                 "max": 3,
                 "min": 1
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:entity_properties",
+                  "entity": "this",
+                  "predicate": {
+                    "components": {
+                      "minecraft:pig/variant": "minecraft:warm"
+                    }
+                  }
+                }
+              ],
+              "function": "minecraft:set_count"
+            },
+            {
+              "add": false,
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 0,
+                "min": 2
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:entity_properties",
+                  "entity": "this",
+                  "predicate": {
+                    "components": {
+                      "minecraft:pig/variant": "minecraft:cold"
+                    }
+                  }
+                }
+              ],
+              "function": "minecraft:set_count"
+            },
+            {
+              "add": false,
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 1,
+                "min": 2
               },
               "conditions": [
                 {

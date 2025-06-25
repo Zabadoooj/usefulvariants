@@ -8,6 +8,41 @@
           "type": "minecraft:item",
           "functions": [
             {
+              "function": "minecraft:set_item",
+              "item": "usefulvariants:cow_wool",
+              "conditions": [
+                {
+                  "condition": "minecraft:entity_properties",
+                  "entity": "this",
+                  "predicate": {
+                    "components": {
+                      "minecraft:cow/variant": "minecraft:cold"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "add": false,
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 1,
+                "min": 0
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:entity_properties",
+                  "entity": "this",
+                  "predicate": {
+                    "components": {
+                      "minecraft:cow/variant": "minecraft:cold"
+                    }
+                  }
+                }
+              ],
+              "function": "minecraft:set_count"
+            },
+            {
               "add": false,
               "count": {
                 "type": "minecraft:uniform",
@@ -31,27 +66,7 @@
               "add": false,
               "count": {
                 "type": "minecraft:uniform",
-                "max": 4,
-                "min": 0
-              },
-              "conditions": [
-                {
-                  "condition": "minecraft:entity_properties",
-                  "entity": "this",
-                  "predicate": {
-                    "components": {
-                      "minecraft:cow/variant": "minecraft:cold"
-                    }
-                  }
-                }
-              ],
-              "function": "minecraft:set_count"
-            },
-            {
-              "add": false,
-              "count": {
-                "type": "minecraft:uniform",
-                "max": 2,
+                "max": 0,
                 "min": 0
               },
               "conditions": [
@@ -77,7 +92,7 @@
               "function": "minecraft:enchanted_count_increase"
             }
           ],
-          "name": "minecraft:leather"
+          "name": "minecraft:beef"
         }
       ],
       "rolls": 1
@@ -92,8 +107,8 @@
               "add": false,
               "count": {
                 "type": "minecraft:uniform",
-                "max": 4,
-                "min": 2
+                "max": 3,
+                "min": 1
               },
               "conditions": [
                 {
@@ -133,7 +148,7 @@
               "count": {
                 "type": "minecraft:uniform",
                 "max": 1,
-                "min": 3
+                "min": 2
               },
               "conditions": [
                 {

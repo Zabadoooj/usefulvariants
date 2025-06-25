@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "misc",
+  "category": "building",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": [
+      "usefulvariants:cow_wool"
+    ]
+  },
+  "result": {
+    "id": "minecraft:brown_wool",
+    "count": 1
+  }
+}

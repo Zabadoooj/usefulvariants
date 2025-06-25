@@ -24,6 +24,16 @@ public class ItemsInit {
             Item::new,
             new Item.Settings()
     );
+    public static final Item PORK_FAT = register(
+            "pork_fat",
+            Item::new,
+            new Item.Settings()
+    );
+    public static final Item COW_WOOL = register(
+            "cow_wool",
+            Item::new,
+            new Item.Settings()
+    );
 
     public static Item register(String name, Function<Item.Settings, Item> itemFactory, Item.Settings settings) {
         // Create the item key.
@@ -47,6 +57,12 @@ public class ItemsInit {
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS)
                 .register((itemgroup) -> itemgroup.add(ItemsInit.WARM_FEATHER));
+
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS)
+                .register((itemgroup) -> itemgroup.add(ItemsInit.PORK_FAT));
+
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS)
+                .register((itemgroup) -> itemgroup.add(ItemsInit.COW_WOOL));
 
         // Завершение инициализации
         UsefulVariants.LOGGER.info("Предмеды загружены");
