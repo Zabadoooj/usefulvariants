@@ -1,11 +1,11 @@
 {
 	"schemaVersion": 1,
 	"id": "usefulvariants",
-	"version": "${version}",
+	"version": "0.0.1",
 	"name": "UsefulVariants",
 	"description": "This is an example description! Tell everyone what your mod is about!",
 	"authors": [
-		"Me!"
+		"Zabadooj"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
