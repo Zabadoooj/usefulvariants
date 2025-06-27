@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "usefulvariants:cold_feather",
+    "usefulvariants:warm_feather",
+    "minecraft:feather"
+  ]
+}

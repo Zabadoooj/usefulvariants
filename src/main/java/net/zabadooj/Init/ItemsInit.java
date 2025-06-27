@@ -7,6 +7,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
+import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
 import net.zabadooj.UsefulVariants;
 
@@ -50,6 +51,9 @@ public class ItemsInit {
 
 
     public static void initialize() {
+
+        // Создание тега перьев
+        TagKey<Item> FEATHERS = TagKey.of(RegistryKeys.ITEM, Identifier.of("c", "feathers"));
 
         // Добавление во вкладки
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS)
